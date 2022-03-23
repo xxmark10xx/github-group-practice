@@ -1,23 +1,31 @@
 import logo from './logo.svg';
 import './App.css';
+import Teammate from './components/Teammate';
+
+const teamates = [
+  {
+      name: "Roman",
+      about: "asdasdasdkkjkalsjdlkjasld",
+      skills: 'software'
+  },
+  {
+    name: "Mark Aguilar",
+    about: "sadkjfhsad fsdkfksdjl",
+    skills: "react"
+  }
+]
 
 function App() {
+  const displayTeam = teamates.map((teamate, index) => {
+    return (
+      <Teammate 
+        teamate={teamate}
+      />
+    )
+  })
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {displayTeam}
     </div>
   );
 }

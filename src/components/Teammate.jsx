@@ -1,17 +1,13 @@
 
-const teamates = [
-    {
-        name: "Roman",
-        about: "asdasdasdkkjkalsjdlkjasld",
-        skills: 'software'
-    }
-]
 
-export default function Teammate() {
-    
-    
+export default function Teammate({ teamate }) {
     
     return (
-        <h1>About us</h1>
+        <div>
+            <h2>{teamate.name}</h2>
+            <h3>{teamate.about}</h3>
+            <h4>{teamate.skills}</h4>
+        </div>
+        
     )
 }
