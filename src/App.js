@@ -12,19 +12,27 @@ const teamates = [
     name: "Mark Aguilar",
     about: "sadkjfhsad fsdkfksdjl",
     skills: "react"
+  },
+  {
+    name: "Andy",
+    about: "ajdivopzjxiocv iofud saiovpu cxziop",
+    skills: "cold hard chillin"
   }
 ]
 
 function App() {
   const displayTeam = teamates.map((teamate, index) => {
     return (
+      <>
       <Teammate 
         teamate={teamate}
       />
+      </>
     )
   })
   return (
     <div className="App">
+      <h1>about us</h1>
       {displayTeam}
     </div>
   );
